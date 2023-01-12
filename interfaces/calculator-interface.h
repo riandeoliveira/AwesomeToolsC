@@ -13,27 +13,71 @@ void calculatorInterface() {
 
     bool exit = false;
 
-    double firstValue;
-    double secondValue;
+    double valueX;
+    double valueY;
+    char operation;
+    double result;
 
     header("           CALCULATOR");
 
     printf("\nFirst value: ");
-    scanf("%lf", &firstValue);
+    scanf("%lf", &valueX);
 
     printf("Second value: ");
-    scanf("%lf", &secondValue);
+    scanf("%lf", &valueY);
 
-    getValues(firstValue, secondValue);
+    printf("\nSelect an operation:\n");
 
-    title("Results:");
+    printf("\na. Addition");
+    printf("\nb. Subtraction");
+    printf("\nc. Multiplication");
+    printf("\nd. Division");
+    printf("\ne. Exponentiation");
+    printf("\nf. Percentage");
 
-    printf("\nAddition:       %.1lf + %.1lf = %.1lf", valueX, valueY, sum());
-    printf("\nSubtraction:    %.1lf - %.1lf = %.1lf", valueX, valueY, subtract());
-    printf("\nMultiplication: %.1lf * %.1lf = %.1lf", valueX, valueY, multiply());
-    printf("\nDivision:       %.1lf / %.1lf = %.1lf", valueX, valueY, divide());
-    printf("\nExponentiation: %.1lf ^ %.1lf = %.1lf", valueX, valueY, exponentiate());
-    printf("\nPercentage:     %.1lf%% of %.1lf = %.1lf", valueX, valueY, percentage());
+    printf("\n\nOperation: ");
+    scanf(" %c", &operation);
+
+    switch (operation) {
+        case 'a':
+        case 'A':
+            result = sum(valueX, valueY);
+            printf("\nResult: %.1lf + %.1lf = %.1lf", valueX, valueY, result);
+
+            break;
+        case 'b':
+        case 'B':
+            result = subtract(valueX, valueY);
+            printf("\nResult: %.1lf - %.1lf = %.1lf", valueX, valueY, result);
+
+            break;
+        case 'c':
+        case 'C':
+            result = multiply(valueX, valueY);
+            printf("\nResult: %.1lf * %.1lf = %.1lf", valueX, valueY, result);
+
+            break;
+        case 'd':
+        case 'D':
+            result = divide(valueX, valueY);
+            printf("\nResult: %.1lf / %.1lf = %.1lf", valueX, valueY, result);
+
+            break;
+        case 'e':
+        case 'E':
+            result = exponentiate(valueX, valueY);
+            printf("\nResult: %.1lf ^ %.1lf = %.1lf", valueX, valueY, result);
+
+            break;
+        case 'f':
+        case 'F':
+            result = percentage(valueX, valueY);
+            printf("\nResult: %.1lf%% of %.1lf is %.1lf", valueX, valueY, result);
+
+            break;
+        default:
+            break;
+    }
 
     footer();
 

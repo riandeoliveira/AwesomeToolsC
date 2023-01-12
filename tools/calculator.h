@@ -4,36 +4,28 @@
 #include <math.h>
 #include <stdio.h>
 
-double valueX = 0;
-double valueY = 0;
-
-void getValues(double x, double y) {
-    valueX = x;
-    valueY = y;
-}
-
-double sum() {
+double sum(double valueX, double valueY) {
     return valueX + valueY;
 }
 
-double subtract() {
+double subtract(double valueX, double valueY) {
     return valueX - valueY;
 }
 
-double multiply() {
+double multiply(double valueX, double valueY) {
     return valueX * valueY;
 }
 
-double divide() {
+double divide(double valueX, double valueY) {
     return valueX / valueY;
 }
 
-double exponentiate() {
+double exponentiate(double valueX, double valueY) {
     return pow(valueX, valueY);
 }
 
-double percentage() {
-    return multiply() / 100;
+double percentage(double valueX, double valueY) {
+    return multiply(valueX, valueY) / 100;
 }
 
 #endif
