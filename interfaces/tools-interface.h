@@ -8,7 +8,7 @@
 #include <stdlib.h>
 
 void toolsInterface() {
-    system("clear");
+    system("cls");
 
     bool exit = false;
 
@@ -21,6 +21,7 @@ void toolsInterface() {
 
         printf("\n1. Calculator");
         printf("\n2. Back to main");
+        printf("\n3. Exit");
 
         printf("\n\nOption: ");
         scanf("%d", &option);
@@ -36,9 +37,14 @@ void toolsInterface() {
                 mainInterface();
 
                 break;
+            case 3:
+                exit = true;
+                system("cls");
+
+                break;
             default:
                 exit = true;
-                system("clear");
+                system("cls");
 
                 break;
         }
