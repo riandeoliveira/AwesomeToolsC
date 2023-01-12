@@ -9,7 +9,7 @@
 #include <stdlib.h>
 
 void calculatorInterface() {
-    system("clear");
+    system("cls");
 
     bool exit = false;
 
@@ -32,8 +32,8 @@ void calculatorInterface() {
     printf("\nSubtraction:    %.1lf - %.1lf = %.1lf", valueX, valueY, subtract());
     printf("\nMultiplication: %.1lf * %.1lf = %.1lf", valueX, valueY, multiply());
     printf("\nDivision:       %.1lf / %.1lf = %.1lf", valueX, valueY, divide());
-    printf("\nExponentiation: %.1lf / %.1lf = %.1lf", valueX, valueY, exponentiate());
-    printf("\nPercentage:     %.1lf / %.1lf = %.1lf", valueX, valueY, percentage());
+    printf("\nExponentiation: %.1lf ^ %.1lf = %.1lf", valueX, valueY, exponentiate());
+    printf("\nPercentage:     %.1lf%% of %.1lf = %.1lf", valueX, valueY, percentage());
 
     footer();
 
@@ -62,12 +62,12 @@ void calculatorInterface() {
                 break;
             case 3:
                 exit = true;
-                system("clear");
+                system("cls");
 
                 break;
             default:
                 exit = true;
-                system("clear");
+                system("cls");
 
                 break;
         }

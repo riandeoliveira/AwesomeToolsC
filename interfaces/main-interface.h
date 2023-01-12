@@ -2,20 +2,21 @@
 #define _MAIN_INTEFACE_
 
 #include "../modules/components.h"
+#include "./games-interface.h"
 #include "./tools-interface.h"
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 
 void mainInterface() {
-    system("clear");
+    system("cls");
 
     bool exit = false;
 
     while (exit == false) {
         int option;
 
-        header("         AWESOME TOOLS");
+        header("         AWESOME TOOLS C");
 
         title("Select an option:");
 
@@ -29,6 +30,7 @@ void mainInterface() {
         switch (option) {
             case 1:
                 exit = true;
+                gamesInterface();
 
                 break;
             case 2:
@@ -38,12 +40,12 @@ void mainInterface() {
                 break;
             case 3:
                 exit = true;
-                system("clear");
+                system("cls");
 
                 break;
             default:
                 exit = true;
-                system("clear");
+                system("cls");
 
                 break;
         }
